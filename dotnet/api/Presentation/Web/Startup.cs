@@ -93,6 +93,7 @@ namespace AndcultureCode.GB.Presentation.Web
                 .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>())
                 .AddViewLocalization().AddDataAnnotationsLocalization();
 
+            services.AddHealthChecks();
             services.AddAndcultureCodeLocalization();
             services.AddApi(_configuration, _environment);
             services.AddBackgroundWorkers(_configuration);
@@ -198,6 +199,7 @@ namespace AndcultureCode.GB.Presentation.Web
 
             app.UseEndpoints(routes =>
             {
+                routes.MapHealthChecks("/health");
                 routes.MapControllerRoute(
                     name: "mvc controllers",
                     pattern: "{controller}/{action=Index}/{id?}"
