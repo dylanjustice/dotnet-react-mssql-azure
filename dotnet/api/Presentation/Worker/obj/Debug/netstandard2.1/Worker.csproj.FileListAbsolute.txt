@@ -1,0 +1,17 @@
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Core.en-US.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Core.es-ES.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Presentation.Worker.en-US.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Presentation.Worker.es-ES.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\AndcultureCode.GB.Presentation.Worker.deps.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\AndcultureCode.GB.Presentation.Worker.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\AndcultureCode.GB.Presentation.Worker.pdb
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Core.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Core.pdb
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\obj\Debug\netstandard2.1\Worker.csproj.AssemblyReference.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\obj\Debug\netstandard2.1\Worker.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\obj\Debug\netstandard2.1\Worker.AssemblyInfoInputs.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\obj\Debug\netstandard2.1\Worker.AssemblyInfo.cs
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\obj\Debug\netstandard2.1\Worker.csproj.CoreCompileInputs.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\obj\Debug\netstandard2.1\Worker.csproj.CopyComplete
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\obj\Debug\netstandard2.1\AndcultureCode.GB.Presentation.Worker.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Presentation\Worker\obj\Debug\netstandard2.1\AndcultureCode.GB.Presentation.Worker.pdb

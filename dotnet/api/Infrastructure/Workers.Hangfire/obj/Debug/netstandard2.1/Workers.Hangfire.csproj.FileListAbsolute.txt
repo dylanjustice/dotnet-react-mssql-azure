@@ -1,0 +1,17 @@
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Core.en-US.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Core.es-ES.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Infrastructure.Workers.Hangfire.en-US.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Infrastructure.Workers.Hangfire.es-ES.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Workers.Hangfire.deps.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Workers.Hangfire.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Workers.Hangfire.pdb
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Core.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Core.pdb
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\obj\Debug\netstandard2.1\Workers.Hangfire.csproj.AssemblyReference.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\obj\Debug\netstandard2.1\Workers.Hangfire.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\obj\Debug\netstandard2.1\Workers.Hangfire.AssemblyInfoInputs.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\obj\Debug\netstandard2.1\Workers.Hangfire.AssemblyInfo.cs
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\obj\Debug\netstandard2.1\Workers.Hangfire.csproj.CoreCompileInputs.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\obj\Debug\netstandard2.1\Workers.Hangfire.csproj.CopyComplete
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\obj\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Workers.Hangfire.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Workers.Hangfire\obj\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Workers.Hangfire.pdb

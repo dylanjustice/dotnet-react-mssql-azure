@@ -1,0 +1,17 @@
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Core.en-US.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Core.es-ES.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Conductors.en-US.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Conductors.es-ES.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Conductors.deps.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Conductors.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Conductors.pdb
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Core.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Core.pdb
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\obj\Debug\netstandard2.1\Conductors.csproj.AssemblyReference.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\obj\Debug\netstandard2.1\Conductors.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\obj\Debug\netstandard2.1\Conductors.AssemblyInfoInputs.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\obj\Debug\netstandard2.1\Conductors.AssemblyInfo.cs
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\obj\Debug\netstandard2.1\Conductors.csproj.CoreCompileInputs.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\obj\Debug\netstandard2.1\Conductors.csproj.CopyComplete
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\obj\Debug\netstandard2.1\AndcultureCode.GB.Business.Conductors.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Business\Conductors\obj\Debug\netstandard2.1\AndcultureCode.GB.Business.Conductors.pdb

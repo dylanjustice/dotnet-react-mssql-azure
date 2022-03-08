@@ -1,0 +1,125 @@
+locals {
+  location = "eastus"
+}
+resource "azurerm_resource_group" "default" {
+  name     = "rg-app-demo-dev"
+  location = local.location
+}
+
+resource "azurerm_application_insights" "default" {
+  name                = "ai-demoapp"
+  location            = local.location
+  resource_group_name = azurerm_resource_group.default.name
+  application_type    = "web"
+}
+
+resource "azurerm_app_service_plan" "backend" {
+  name                = "asp-backend-dev"
+  kind                = "Linux"
+  location            = local.location
+  resource_group_name = azurerm_resource_group.default.name
+  reserved            = true
+  sku {
+    tier = "Standard"
+    size = "S1"
+  }
+}
+resource "azurerm_app_service_plan" "frontend" {
+  name                = "asp-frontend-dev"
+  kind                = "Linux"
+  location            = local.location
+  resource_group_name = azurerm_resource_group.default.name
+  reserved            = true
+  sku {
+    tier = "Standard"
+    size = "S1"
+  }
+}
+
+data "azurerm_client_config" "current" {}
+
+data "azuread_user" "admin" {
+  user_principal_name = "admin@DylanJustice.onmicrosoft.com"
+}
+
+resource "random_password" "mssql_password" {
+  length           = 16
+  special          = true
+  override_special = "@!$"
+}
+
+resource "azurerm_mssql_server" "default" {
+  name                         = "mssqlserver-demo"
+  resource_group_name          = azurerm_resource_group.default.name
+  location                     = local.location
+  version                      = "12.0"
+  administrator_login          = "mssqladmin"
+  administrator_login_password = random_password.mssql_password.result
+  azuread_administrator {
+    login_username = "admin@DylanJustice.onmicrosoft.com"
+    object_id      = data.azuread_user.admin.object_id
+    tenant_id      = data.azurerm_client_config.current.tenant_id
+  }
+}
+
+resource "azurerm_mssql_database" "api" {
+  name           = "db-demo-api"
+  server_id      = azurerm_mssql_server.default.id
+  collation      = "SQL_Latin1_General_CP1_CI_AS"
+  license_type   = "BasePrice"
+  max_size_gb    = 4
+  read_scale     = true
+  sku_name       = "BC_Gen5_2"
+  zone_redundant = false
+}
+
+resource "azurerm_app_service" "backend" {
+  name                = "app-gravityboots-backend-dev"
+  location            = local.location
+  resource_group_name = azurerm_resource_group.default.name
+  app_service_plan_id = azurerm_app_service_plan.backend.id
+  site_config {
+    dotnet_framework_version = "v5.0"
+    health_check_path        = "/health"
+    min_tls_version          = "1.2"
+  }
+  identity {
+    type = "SystemAssigned"
+  }
+
+  app_settings = {
+    APPINSIGHTS_INSTRUMENTATIONKEY = azurerm_application_insights.default.instrumentation_key
+    WEBSITE_RUN_FROM_PACKAGE       = "1"
+  }
+  connection_string {
+    name  = "Api"
+    type  = "SQLAzure"
+    value = "server=tcp:${azurerm_mssql_server.default.fully_qualified_domain_name};database=${azurerm_mssql_database.api.name};"
+  }
+}
+
+resource "azurerm_app_service" "matters_app" {
+  app_service_plan_id = azurerm_app_service_plan.frontend.id
+  location            = local.location
+  name                = "app-gravityboots-frontend-dev"
+  resource_group_name = azurerm_resource_group.default.name
+  auth_settings {
+    enabled                       = false
+    unauthenticated_client_action = "AllowAnonymous"
+    runtime_version               = "~1"
+  }
+  site_config {
+    app_command_line = "pm2 serve /home/site/wwwroot --no-daemon --spa"
+    ftps_state       = "Disabled"
+    linux_fx_version = "NODE|14-lts"
+  }
+  logs {
+    failed_request_tracing_enabled = true
+  }
+  app_settings = {
+    WEBSITE_RUN_FROM_PACKAGE = "1"
+  }
+  identity {
+    type = "SystemAssigned"
+  }
+}

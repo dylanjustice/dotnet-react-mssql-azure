@@ -1,0 +1,17 @@
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Core.en-US.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Business.Core.es-ES.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Infrastructure.Data.SqlServer.en-US.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\Cultures\AndcultureCode.GB.Infrastructure.Data.SqlServer.es-ES.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Data.SqlServer.deps.json
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Data.SqlServer.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Data.SqlServer.pdb
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Core.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\bin\Debug\netstandard2.1\AndcultureCode.GB.Business.Core.pdb
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\obj\Debug\netstandard2.1\Data.SqlServer.csproj.AssemblyReference.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\obj\Debug\netstandard2.1\Data.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\obj\Debug\netstandard2.1\Data.SqlServer.AssemblyInfoInputs.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\obj\Debug\netstandard2.1\Data.SqlServer.AssemblyInfo.cs
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\obj\Debug\netstandard2.1\Data.SqlServer.csproj.CoreCompileInputs.cache
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\obj\Debug\netstandard2.1\Data.SqlServer.csproj.CopyComplete
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\obj\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Data.SqlServer.dll
+C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\obj\Debug\netstandard2.1\AndcultureCode.GB.Infrastructure.Data.SqlServer.pdb
