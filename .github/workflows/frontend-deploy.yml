@@ -1,10 +1,6 @@
 name: frontend-deploy
 
 on:
-    push:
-        branches: ["*"]
-    pull_request:
-        branches: [trunk]
     workflow_dispatch:
 
 jobs:
