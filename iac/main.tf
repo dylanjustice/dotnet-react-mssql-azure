@@ -38,6 +38,25 @@ resource "azurerm_app_service_plan" "frontend" {
 
 data "azurerm_client_config" "current" {}
 
+resource "azurerm_key_vault" "default" {
+  name                        = "kv-app-demo"
+  location                    = local.location
+  resource_group_name         = azurerm_resource_group.default.name
+  enabled_for_disk_encryption = true
+  tenant_id                   = data.azurerm_client_config.current.tenant_id
+  soft_delete_retention_days  = 7
+  purge_protection_enabled    = true
+  sku_name                    = "standard"
+}
+
+resource "azurerm_key_vault_access_policy" "current" {
+  key_vault_id       = azurerm_key_vault.default.id
+  tenant_id          = data.azurerm_client_config.current.tenant_id
+  object_id          = data.azurerm_client_config.current.object_id
+  key_permissions    = var.key_permissions
+  secret_permissions = var.secret_permissions
+}
+
 resource "azuread_application" "mssql_admin" {
   display_name = "mssql-admin"
   owners       = [data.azurerm_client_config.current.object_id]
@@ -49,9 +68,15 @@ resource "azuread_service_principal" "mssql_admin" {
 }
 
 resource "random_password" "mssql_password" {
-  length           = 16
+  length           = 18
   special          = true
   override_special = "@!$"
+}
+
+resource "azurerm_key_vault_secret" "mssql_password" {
+  name         = "kvs-mssql-password"
+  value        = random_password.mssql_password.result
+  key_vault_id = azurerm_key_vault.default.id
 }
 
 resource "azurerm_mssql_server" "default" {
