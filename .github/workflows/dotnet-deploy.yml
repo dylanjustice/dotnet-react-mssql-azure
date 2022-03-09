@@ -27,9 +27,9 @@ jobs:
 
             - name: dotnet build and publish
               run: |
-                dotnet restore
-                dotnet build --project dotnet/api/ --configuration Release
-                dotnet publish --project dotnet/api -c Release
+                dotnet restore dotnet/api
+                dotnet build dotnet/api/ --configuration Release
+                dotnet publish dotnet/api -c Release
 
             - name: 'Login via Azure CLI'
               uses: azure/login@v1
