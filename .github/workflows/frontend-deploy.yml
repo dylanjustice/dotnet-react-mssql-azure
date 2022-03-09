@@ -1,0 +1,51 @@
+name: frontend-deploy
+
+on:
+    push:
+        branches: ["*"]
+    pull_request:
+        branches: [trunk]
+    workflow_dispatch:
+
+jobs:
+    build:
+        env:
+            AZURE_WEBAPP_NAME: app-gravityboots-frontend-dev    # set this to your application's name
+            AZURE_WEBAPP_PACKAGE_PATH: 'frontend'      # set this to the path to your web app project, defaults to the repository root
+            # Set the locale
+            LC_ALL: en_US.UTF-8
+            LANG: en_US.UTF-8
+        runs-on: ubuntu-latest
+        if: always()
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Setup node
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 14
+
+            - name: npm install
+              # Using Cypress action for caching optimization (saves ~3mins of downloading Cypress every build)
+              uses: cypress-io/github-action@v2
+              with:
+                  # Skipping actual tests for now - requires dotnet & webpack running
+                  runTests: false
+                  working-directory: frontend
+
+            - name: npm run build
+              run: |
+                  cd frontend
+                  npm run build
+
+            - name: 'Login via Azure CLI'
+              uses: azure/login@v1
+              with:
+                creds: ${{ secrets.AZURE_CREDENTIALS_DEV }}
+
+            # Deploy to Azure Web apps
+            - name: 'Run Azure webapp deploy action using publish profile credentials'
+              uses: azure/webapps-deploy@v2
+              with:
+                app-name: ${{ env.AZURE_WEBAPP_NAME }} # Replace with your app name
+                package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build'
