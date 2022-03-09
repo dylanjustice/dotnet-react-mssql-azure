@@ -38,8 +38,14 @@ resource "azurerm_app_service_plan" "frontend" {
 
 data "azurerm_client_config" "current" {}
 
-data "azuread_user" "admin" {
-  user_principal_name = "admin@DylanJustice.onmicrosoft.com"
+resource "azuread_application" "mssql_admin" {
+  display_name = "mssql-admin"
+  owners       = [data.azurerm_client_config.current.object_id]
+}
+resource "azuread_service_principal" "mssql_admin" {
+  application_id               = azuread_application.mssql_admin.application_id
+  app_role_assignment_required = false
+  owners                       = [data.azurerm_client_config.current.object_id]
 }
 
 resource "random_password" "mssql_password" {
@@ -56,8 +62,8 @@ resource "azurerm_mssql_server" "default" {
   administrator_login          = "mssqladmin"
   administrator_login_password = random_password.mssql_password.result
   azuread_administrator {
-    login_username = "admin@DylanJustice.onmicrosoft.com"
-    object_id      = data.azuread_user.admin.object_id
+    login_username = azuread_service_principal.mssql_admin.display_name
+    object_id      = azuread_service_principal.mssql_admin.object_id
     tenant_id      = data.azurerm_client_config.current.tenant_id
   }
 }
