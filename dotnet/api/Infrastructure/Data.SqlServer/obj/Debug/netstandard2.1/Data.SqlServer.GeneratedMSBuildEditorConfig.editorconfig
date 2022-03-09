@@ -1,3 +1,0 @@
-is_global = true
-build_property.RootNamespace = Data.SqlServer
-build_property.ProjectDir = C:\projects\dylanjustice\dotnet-react-mssql-azure\dotnet\api\Infrastructure\Data.SqlServer\
