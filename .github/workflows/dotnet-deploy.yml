@@ -34,7 +34,7 @@ jobs:
             - name: 'Login via Azure CLI'
               uses: azure/login@v1
               with:
-                creds: ${{ secrets.AZURE_CREDENTIALS_DEV }}
+                creds: ${{ secrets.AZURE_CREDENTIALS }}
 
             # Deploy to Azure Web apps
             - name: 'Run Azure webapp deploy action using publish profile credentials'
