@@ -55,8 +55,11 @@ namespace AndcultureCode.GB.Business.Core.Providers.Logging
             var serviceProvider = _services.BuildServiceProvider();
 
             return new LoggerConfiguration()
-                .WriteTo
-                .ApplicationInsights(
+                .WriteTo.Console(
+                         restrictedToMinimumLevel: LogEventLevel.Debug,
+                         outputTemplate: OUTPUT_TEMPLATE,
+                         theme: SystemConsoleTheme.Colored)
+                .WriteTo.ApplicationInsights(
                     telemetryConfiguration: serviceProvider.GetRequiredService<TelemetryConfiguration>(),
                     telemetryConverter: TelemetryConverter.Traces)
                 .Enrich.WithMachineName()
