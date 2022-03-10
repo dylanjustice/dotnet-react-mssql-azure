@@ -67,10 +67,20 @@ resource "azuread_service_principal" "mssql_admin" {
   owners                       = [data.azurerm_client_config.current.object_id]
 }
 
+resource "azuread_application_password" "mssql_admin" {
+  application_object_id = azuread_application.mssql_admin.object_id
+}
+
 resource "random_password" "mssql_password" {
   length           = 18
   special          = true
   override_special = "@!$"
+}
+
+resource "azurerm_key_vault_secret" "sp_secret" {
+  name         = "kvs-ad-admin-password"
+  value        = azuread_application_password.mssql_admin.value
+  key_vault_id = azurerm_key_vault.default.id
 }
 
 resource "azurerm_key_vault_secret" "mssql_password" {
