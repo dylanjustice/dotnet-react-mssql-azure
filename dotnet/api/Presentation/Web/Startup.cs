@@ -131,7 +131,7 @@ namespace AndcultureCode.GB.Presentation.Web
         public void Configure(
             IApplicationBuilder app,
             IHostEnvironment env,
-            IWorkerProvider workerProvider,
+            // IWorkerProvider workerProvider,
             IOptions<RequestLocalizationOptions> requestOptions
         )
         {
@@ -169,7 +169,7 @@ namespace AndcultureCode.GB.Presentation.Web
                 app.UseHsts();
             }
 
-            app.UseBackgroundWorkerServer(_configuration);
+            // app.UseBackgroundWorkerServer(_configuration);
             app.UseGlobalExceptionHandler();
             app.UseHttpsRedirection();
 
@@ -227,7 +227,7 @@ namespace AndcultureCode.GB.Presentation.Web
             });
 
             // Register Background Jobs
-            ConfigureBackgroundJobs(app, env, workerProvider);
+            // ConfigureBackgroundJobs(app, env, workerProvider);
         }
 
         public virtual void ConfigureBackgroundJobs(
