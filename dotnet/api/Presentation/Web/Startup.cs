@@ -96,7 +96,7 @@ namespace AndcultureCode.GB.Presentation.Web
             services.AddHealthChecks();
             services.AddAndcultureCodeLocalization();
             services.AddApi(_configuration, _environment);
-            // services.AddBackgroundWorkers(_configuration); # TODO: Hangfire doesn't support sql active directory auth as of now
+            services.AddBackgroundWorkers(_configuration);
             services
                 .AddCookieAuthentication(_configuration)
                 .AddGoogleOAuth(_configuration)
@@ -131,7 +131,7 @@ namespace AndcultureCode.GB.Presentation.Web
         public void Configure(
             IApplicationBuilder app,
             IHostEnvironment env,
-            // IWorkerProvider workerProvider,
+            IWorkerProvider workerProvider,
             IOptions<RequestLocalizationOptions> requestOptions
         )
         {
@@ -169,7 +169,7 @@ namespace AndcultureCode.GB.Presentation.Web
                 app.UseHsts();
             }
 
-            // app.UseBackgroundWorkerServer(_configuration);
+            app.UseBackgroundWorkerServer(_configuration);
             app.UseGlobalExceptionHandler();
             app.UseHttpsRedirection();
 

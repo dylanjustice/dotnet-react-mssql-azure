@@ -23,7 +23,7 @@ namespace AndcultureCode.GB.Infrastructure.Workers.Hangfire.Extensions
         public static IServiceCollection AddBackgroundWorkers(this IServiceCollection services, IConfigurationRoot config)
         {
             var workerConfig = config.GetSection("WorkersHangfire").Get<HangfireWorkerConfiguration>();
-            var connectionString = ConfigurationUtils.GetConnectionString();
+            var connectionString = ConfigurationUtils.GetConnectionString("Hangfire");
             var sqlOptions = new SqlServerStorageOptions
             {
                 CommandBatchMaxTimeout = TimeSpan.FromMinutes(workerConfig.SqlServerOptions.CommandBatchMaxTimeout),
@@ -34,6 +34,8 @@ namespace AndcultureCode.GB.Infrastructure.Workers.Hangfire.Extensions
                 UseRecommendedIsolationLevel = workerConfig.SqlServerOptions.UseRecommendedIsolationLevel
             };
 
+
+
             services.AddBackgroundWorkerDependencies();
 
             Console.WriteLine($"Connecting to Hangfire SqlServer Storage => {connectionString}");
@@ -42,7 +44,7 @@ namespace AndcultureCode.GB.Infrastructure.Workers.Hangfire.Extensions
                             .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
                             .UseSimpleAssemblyNameTypeSerializer()
                             .UseRecommendedSerializerSettings()
-                            .UseSqlServerStorage(connectionString, sqlOptions));
+                            .UseSqlServerStorage(() => new Microsoft.Data.SqlClient.SqlConnection(connectionString), sqlOptions));
 
             // Add the processing server as IHostedService
             services.AddHangfireServer();

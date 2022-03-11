@@ -197,6 +197,11 @@ resource "azurerm_app_service" "backend" {
     type  = "SQLAzure"
     value = "Server=tcp:${azurerm_mssql_server.default.fully_qualified_domain_name};database=${azurerm_mssql_database.api.name};Authentication=Active Directory Default;"
   }
+  connection_string {
+    name  = "Hangfire"
+    type  = "SQLAzure"
+    value = "Server=tcp:${azurerm_mssql_server.default.fully_qualified_domain_name};database=${azurerm_mssql_database.api.name};Trusted_Connection=True;"
+  }
 }
 resource "azurerm_app_service_virtual_network_swift_connection" "vnet" {
   app_service_id = azurerm_app_service.backend.id
