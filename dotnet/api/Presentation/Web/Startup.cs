@@ -104,6 +104,7 @@ namespace AndcultureCode.GB.Presentation.Web
             services.AddForwardedHeaders();
             services.AddApplicationInsightsTelemetry(); // Must be registered before Serilog provider
             services.AddSerilogServices(_configuration, _environment);
+            services.AddBackgroundWorkerServer(_configuration);
 
             // Caching
             services.AddMemoryCache();
