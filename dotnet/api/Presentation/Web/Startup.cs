@@ -170,7 +170,7 @@ namespace AndcultureCode.GB.Presentation.Web
                 app.UseHsts();
             }
 
-            app.UseBackgroundWorkerServer(_configuration);
+            app.UseHangfireDashboard(_configuration);
             app.UseGlobalExceptionHandler();
             app.UseHttpsRedirection();
 
