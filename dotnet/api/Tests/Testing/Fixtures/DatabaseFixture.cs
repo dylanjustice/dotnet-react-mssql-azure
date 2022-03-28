@@ -54,7 +54,8 @@ namespace AndcultureCode.GB.Tests.Testing.Fixtures
                 DataSource = dataSource,
                 MultipleActiveResultSets = true,
                 Password = "Passw0rd!",
-                UserID = "sa"
+                UserID = "sa",
+                Encrypt = false
             };
 
             var dockerClientUri = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
